@@ -29,3 +29,8 @@ jobs:
         
       - name: Publish
         run: dotnet publish Sample01/Sample01.csproj -c Release -o ./publish
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sample01
+          path: ./publish
