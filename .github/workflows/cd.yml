@@ -23,3 +23,5 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           run-id: ${{ github.event.workflow_run.id }}
+      - name: Show downloaded files
+        run: ls -la ./deploy
