@@ -24,4 +24,6 @@ jobs:
           repository: ${{ github.repository }}
           run-id: ${{ github.event.workflow_run.id }}
       - name: Show downloaded files
-        run: ls -la ./deploy
+        run: |
+          echo "=== DEPLOY DIRECTORY ==="
+          find ./deploy -type f -print
