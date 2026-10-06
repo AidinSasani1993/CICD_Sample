@@ -26,3 +26,6 @@ jobs:
 
       - name: Test
         run: dotnet test --no-build
+        
+      - name: Publish
+        run: dotnet publish Sample01/Sample01.csproj -c Release -o ./publish
